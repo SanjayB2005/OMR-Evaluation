@@ -1,0 +1,1408 @@
+{
+  "image_path": "C:\\Users\\ADMIN\\Downloads\\Final-Year-Project-main\\Final-Year-Project-main\\DataSets\\Set A\\Img1.jpeg",
+  "shaded_avg": 134.14791666666665,
+  "unshaded_avg": 179.67113128491619,
+  "optimal_threshold": 156.90952397579142,
+  "bubble_data": [
+    {
+      "question": 1,
+      "subject": "Python",
+      "intensities": {
+        "A": 141.4525,
+        "B": 198.4425,
+        "C": 198.1025,
+        "D": 198.93
+      },
+      "min_intensity": 141.4525,
+      "max_intensity": 198.93,
+      "contrast": 57.47750000000002,
+      "likely_answer": "A"
+    },
+    {
+      "question": 2,
+      "subject": "Python",
+      "intensities": {
+        "A": 144.5275,
+        "B": 198.55,
+        "C": 199.7875,
+        "D": 200.6225
+      },
+      "min_intensity": 144.5275,
+      "max_intensity": 200.6225,
+      "contrast": 56.095,
+      "likely_answer": "A"
+    },
+    {
+      "question": 3,
+      "subject": "Python",
+      "intensities": {
+        "A": 149.1175,
+        "B": 199.315,
+        "C": 195.765,
+        "D": 196.2125
+      },
+      "min_intensity": 149.1175,
+      "max_intensity": 199.315,
+      "contrast": 50.19749999999999,
+      "likely_answer": "A"
+    },
+    {
+      "question": 4,
+      "subject": "Python",
+      "intensities": {
+        "A": 144.3775,
+        "B": 197.04,
+        "C": 194.075,
+        "D": 196.33
+      },
+      "min_intensity": 144.3775,
+      "max_intensity": 197.04,
+      "contrast": 52.662499999999994,
+      "likely_answer": "A"
+    },
+    {
+      "question": 5,
+      "subject": "Python",
+      "intensities": {
+        "A": 150.5325,
+        "B": 195.765,
+        "C": 188.1075,
+        "D": 192.6125
+      },
+      "min_intensity": 150.5325,
+      "max_intensity": 195.765,
+      "contrast": 45.23249999999999,
+      "likely_answer": "A"
+    },
+    {
+      "question": 6,
+      "subject": "Python",
+      "intensities": {
+        "A": 164.065,
+        "B": 195.1525,
+        "C": 195.585,
+        "D": 158.9875
+      },
+      "min_intensity": 158.9875,
+      "max_intensity": 195.585,
+      "contrast": 36.5975,
+      "likely_answer": "D"
+    },
+    {
+      "question": 7,
+      "subject": "Python",
+      "intensities": {
+        "A": 173.74,
+        "B": 194.72,
+        "C": 187.625,
+        "D": 190.5425
+      },
+      "min_intensity": 173.74,
+      "max_intensity": 194.72,
+      "contrast": 20.97999999999999,
+      "likely_answer": null
+    },
+    {
+      "question": 8,
+      "subject": "Python",
+      "intensities": {
+        "A": 185.855,
+        "B": 195.3,
+        "C": 195.0475,
+        "D": 193.2125
+      },
+      "min_intensity": 185.855,
+      "max_intensity": 195.3,
+      "contrast": 9.445000000000022,
+      "likely_answer": null
+    },
+    {
+      "question": 9,
+      "subject": "Python",
+      "intensities": {
+        "A": 191.775,
+        "B": 195.185,
+        "C": 177.0425,
+        "D": 191.5825
+      },
+      "min_intensity": 177.0425,
+      "max_intensity": 195.185,
+      "contrast": 18.142500000000013,
+      "likely_answer": null
+    },
+    {
+      "question": 10,
+      "subject": "Python",
+      "intensities": {
+        "A": 186.2575,
+        "B": 191.4725,
+        "C": 185.19,
+        "D": 191.7375
+      },
+      "min_intensity": 185.19,
+      "max_intensity": 191.7375,
+      "contrast": 6.547500000000014,
+      "likely_answer": null
+    },
+    {
+      "question": 11,
+      "subject": "Python",
+      "intensities": {
+        "A": 186.12,
+        "B": 190.7225,
+        "C": 191.68,
+        "D": 193.3375
+      },
+      "min_intensity": 186.12,
+      "max_intensity": 193.3375,
+      "contrast": 7.217500000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 12,
+      "subject": "Python",
+      "intensities": {
+        "A": 186.3325,
+        "B": 189.2275,
+        "C": 117.6225,
+        "D": 183.9275
+      },
+      "min_intensity": 117.6225,
+      "max_intensity": 189.2275,
+      "contrast": 71.60499999999999,
+      "likely_answer": "C"
+    },
+    {
+      "question": 13,
+      "subject": "Python",
+      "intensities": {
+        "A": 186.0225,
+        "B": 187.6825,
+        "C": 186.49,
+        "D": 188.725
+      },
+      "min_intensity": 186.0225,
+      "max_intensity": 188.725,
+      "contrast": 2.7024999999999864,
+      "likely_answer": null
+    },
+    {
+      "question": 14,
+      "subject": "Python",
+      "intensities": {
+        "A": 185.13,
+        "B": 185.465,
+        "C": 155.0925,
+        "D": 185.785
+      },
+      "min_intensity": 155.0925,
+      "max_intensity": 185.785,
+      "contrast": 30.692499999999995,
+      "likely_answer": "C"
+    },
+    {
+      "question": 15,
+      "subject": "Python",
+      "intensities": {
+        "A": 184.0,
+        "B": 185.33,
+        "C": 186.18,
+        "D": 188.6225
+      },
+      "min_intensity": 184.0,
+      "max_intensity": 188.6225,
+      "contrast": 4.622500000000002,
+      "likely_answer": null
+    },
+    {
+      "question": 16,
+      "subject": "Python",
+      "intensities": {
+        "A": 183.7725,
+        "B": 176.195,
+        "C": 177.1675,
+        "D": 177.6525
+      },
+      "min_intensity": 176.195,
+      "max_intensity": 183.7725,
+      "contrast": 7.577500000000015,
+      "likely_answer": null
+    },
+    {
+      "question": 17,
+      "subject": "Python",
+      "intensities": {
+        "A": 181.76,
+        "B": 182.125,
+        "C": 179.1275,
+        "D": 147.4
+      },
+      "min_intensity": 147.4,
+      "max_intensity": 182.125,
+      "contrast": 34.724999999999994,
+      "likely_answer": "D"
+    },
+    {
+      "question": 18,
+      "subject": "Python",
+      "intensities": {
+        "A": 176.4975,
+        "B": 178.9025,
+        "C": 177.835,
+        "D": 174.9425
+      },
+      "min_intensity": 174.9425,
+      "max_intensity": 178.9025,
+      "contrast": 3.960000000000008,
+      "likely_answer": null
+    },
+    {
+      "question": 19,
+      "subject": "Python",
+      "intensities": {
+        "A": 176.4025,
+        "B": 163.6225,
+        "C": 157.9525,
+        "D": 169.645
+      },
+      "min_intensity": 157.9525,
+      "max_intensity": 176.4025,
+      "contrast": 18.450000000000017,
+      "likely_answer": null
+    },
+    {
+      "question": 20,
+      "subject": "Python",
+      "intensities": {
+        "A": 169.43,
+        "B": 180.7425,
+        "C": 179.87,
+        "D": 179.3575
+      },
+      "min_intensity": 169.43,
+      "max_intensity": 180.7425,
+      "contrast": 11.3125,
+      "likely_answer": null
+    },
+    {
+      "question": 21,
+      "subject": "EDA",
+      "intensities": {
+        "A": 200.085,
+        "B": 200.925,
+        "C": 201.9075,
+        "D": 195.8025
+      },
+      "min_intensity": 195.8025,
+      "max_intensity": 201.9075,
+      "contrast": 6.10499999999999,
+      "likely_answer": null
+    },
+    {
+      "question": 22,
+      "subject": "EDA",
+      "intensities": {
+        "A": 200.8875,
+        "B": 200.89,
+        "C": 198.0025,
+        "D": 192.97
+      },
+      "min_intensity": 192.97,
+      "max_intensity": 200.89,
+      "contrast": 7.9199999999999875,
+      "likely_answer": null
+    },
+    {
+      "question": 23,
+      "subject": "EDA",
+      "intensities": {
+        "A": 196.57,
+        "B": 200.48,
+        "C": 178.4575,
+        "D": 197.55
+      },
+      "min_intensity": 178.4575,
+      "max_intensity": 200.48,
+      "contrast": 22.02249999999998,
+      "likely_answer": null
+    },
+    {
+      "question": 24,
+      "subject": "EDA",
+      "intensities": {
+        "A": 194.715,
+        "B": 200.21,
+        "C": 198.395,
+        "D": 196.5475
+      },
+      "min_intensity": 194.715,
+      "max_intensity": 200.21,
+      "contrast": 5.4950000000000045,
+      "likely_answer": null
+    },
+    {
+      "question": 25,
+      "subject": "EDA",
+      "intensities": {
+        "A": 163.7825,
+        "B": 196.4125,
+        "C": 196.46,
+        "D": 197.3175
+      },
+      "min_intensity": 163.7825,
+      "max_intensity": 197.3175,
+      "contrast": 33.535,
+      "likely_answer": "A"
+    },
+    {
+      "question": 26,
+      "subject": "EDA",
+      "intensities": {
+        "A": 194.3025,
+        "B": 193.385,
+        "C": 195.335,
+        "D": 164.5575
+      },
+      "min_intensity": 164.5575,
+      "max_intensity": 195.335,
+      "contrast": 30.777500000000003,
+      "likely_answer": "D"
+    },
+    {
+      "question": 27,
+      "subject": "EDA",
+      "intensities": {
+        "A": 191.485,
+        "B": 192.25,
+        "C": 179.7775,
+        "D": 195.2925
+      },
+      "min_intensity": 179.7775,
+      "max_intensity": 195.2925,
+      "contrast": 15.514999999999986,
+      "likely_answer": null
+    },
+    {
+      "question": 28,
+      "subject": "EDA",
+      "intensities": {
+        "A": 191.335,
+        "B": 190.5075,
+        "C": 185.81,
+        "D": 195.64
+      },
+      "min_intensity": 185.81,
+      "max_intensity": 195.64,
+      "contrast": 9.829999999999984,
+      "likely_answer": null
+    },
+    {
+      "question": 29,
+      "subject": "EDA",
+      "intensities": {
+        "A": 190.9925,
+        "B": 189.835,
+        "C": 192.83,
+        "D": 194.225
+      },
+      "min_intensity": 189.835,
+      "max_intensity": 194.225,
+      "contrast": 4.389999999999986,
+      "likely_answer": null
+    },
+    {
+      "question": 30,
+      "subject": "EDA",
+      "intensities": {
+        "A": 187.3125,
+        "B": 178.3575,
+        "C": 189.99,
+        "D": 190.7725
+      },
+      "min_intensity": 178.3575,
+      "max_intensity": 190.7725,
+      "contrast": 12.41500000000002,
+      "likely_answer": null
+    },
+    {
+      "question": 31,
+      "subject": "EDA",
+      "intensities": {
+        "A": 191.77,
+        "B": 192.4275,
+        "C": 192.825,
+        "D": 190.9175
+      },
+      "min_intensity": 190.9175,
+      "max_intensity": 192.825,
+      "contrast": 1.9074999999999989,
+      "likely_answer": null
+    },
+    {
+      "question": 32,
+      "subject": "EDA",
+      "intensities": {
+        "A": 186.79,
+        "B": 175.42,
+        "C": 189.0675,
+        "D": 185.1575
+      },
+      "min_intensity": 175.42,
+      "max_intensity": 189.0675,
+      "contrast": 13.647500000000008,
+      "likely_answer": null
+    },
+    {
+      "question": 33,
+      "subject": "EDA",
+      "intensities": {
+        "A": 163.7625,
+        "B": 180.6275,
+        "C": 156.425,
+        "D": 187.6775
+      },
+      "min_intensity": 156.425,
+      "max_intensity": 187.6775,
+      "contrast": 31.252499999999998,
+      "likely_answer": "C"
+    },
+    {
+      "question": 34,
+      "subject": "EDA",
+      "intensities": {
+        "A": 188.055,
+        "B": 187.72,
+        "C": 185.1675,
+        "D": 187.545
+      },
+      "min_intensity": 185.1675,
+      "max_intensity": 188.055,
+      "contrast": 2.887500000000017,
+      "likely_answer": null
+    },
+    {
+      "question": 35,
+      "subject": "EDA",
+      "intensities": {
+        "A": 188.6225,
+        "B": 188.91,
+        "C": 189.385,
+        "D": 190.19
+      },
+      "min_intensity": 188.6225,
+      "max_intensity": 190.19,
+      "contrast": 1.5674999999999955,
+      "likely_answer": null
+    },
+    {
+      "question": 36,
+      "subject": "EDA",
+      "intensities": {
+        "A": 183.6275,
+        "B": 169.2625,
+        "C": 179.7525,
+        "D": 182.485
+      },
+      "min_intensity": 169.2625,
+      "max_intensity": 183.6275,
+      "contrast": 14.365000000000009,
+      "likely_answer": null
+    },
+    {
+      "question": 37,
+      "subject": "EDA",
+      "intensities": {
+        "A": 184.44,
+        "B": 182.6475,
+        "C": 154.815,
+        "D": 178.6525
+      },
+      "min_intensity": 154.815,
+      "max_intensity": 184.44,
+      "contrast": 29.625,
+      "likely_answer": null
+    },
+    {
+      "question": 38,
+      "subject": "EDA",
+      "intensities": {
+        "A": 183.51,
+        "B": 182.2125,
+        "C": 175.4875,
+        "D": 176.27
+      },
+      "min_intensity": 175.4875,
+      "max_intensity": 183.51,
+      "contrast": 8.02249999999998,
+      "likely_answer": null
+    },
+    {
+      "question": 39,
+      "subject": "EDA",
+      "intensities": {
+        "A": 181.31,
+        "B": 174.355,
+        "C": 79.385,
+        "D": 175.5975
+      },
+      "min_intensity": 79.385,
+      "max_intensity": 181.31,
+      "contrast": 101.925,
+      "likely_answer": "C"
+    },
+    {
+      "question": 40,
+      "subject": "EDA",
+      "intensities": {
+        "A": 180.035,
+        "B": 180.9725,
+        "C": 180.44,
+        "D": 175.515
+      },
+      "min_intensity": 175.515,
+      "max_intensity": 180.9725,
+      "contrast": 5.45750000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 41,
+      "subject": "SQL",
+      "intensities": {
+        "A": 196.9325,
+        "B": 197.51,
+        "C": 199.615,
+        "D": 194.91
+      },
+      "min_intensity": 194.91,
+      "max_intensity": 199.615,
+      "contrast": 4.7050000000000125,
+      "likely_answer": null
+    },
+    {
+      "question": 42,
+      "subject": "SQL",
+      "intensities": {
+        "A": 199.8825,
+        "B": 203.285,
+        "C": 187.955,
+        "D": 202.875
+      },
+      "min_intensity": 187.955,
+      "max_intensity": 203.285,
+      "contrast": 15.329999999999984,
+      "likely_answer": null
+    },
+    {
+      "question": 43,
+      "subject": "SQL",
+      "intensities": {
+        "A": 203.2275,
+        "B": 195.955,
+        "C": 198.2675,
+        "D": 203.665
+      },
+      "min_intensity": 195.955,
+      "max_intensity": 203.665,
+      "contrast": 7.7099999999999795,
+      "likely_answer": null
+    },
+    {
+      "question": 44,
+      "subject": "SQL",
+      "intensities": {
+        "A": 201.2675,
+        "B": 197.9025,
+        "C": 141.32,
+        "D": 204.1025
+      },
+      "min_intensity": 141.32,
+      "max_intensity": 204.1025,
+      "contrast": 62.7825,
+      "likely_answer": "C"
+    },
+    {
+      "question": 45,
+      "subject": "SQL",
+      "intensities": {
+        "A": 201.63,
+        "B": 197.7775,
+        "C": 197.79,
+        "D": 203.4125
+      },
+      "min_intensity": 197.7775,
+      "max_intensity": 203.4125,
+      "contrast": 5.634999999999991,
+      "likely_answer": null
+    },
+    {
+      "question": 46,
+      "subject": "SQL",
+      "intensities": {
+        "A": 199.7975,
+        "B": 196.39,
+        "C": 197.035,
+        "D": 202.655
+      },
+      "min_intensity": 196.39,
+      "max_intensity": 202.655,
+      "contrast": 6.265000000000015,
+      "likely_answer": null
+    },
+    {
+      "question": 47,
+      "subject": "SQL",
+      "intensities": {
+        "A": 199.35,
+        "B": 146.9125,
+        "C": 195.5975,
+        "D": 200.5325
+      },
+      "min_intensity": 146.9125,
+      "max_intensity": 200.5325,
+      "contrast": 53.620000000000005,
+      "likely_answer": "B"
+    },
+    {
+      "question": 48,
+      "subject": "SQL",
+      "intensities": {
+        "A": 198.37,
+        "B": 140.6075,
+        "C": 190.3175,
+        "D": 193.44
+      },
+      "min_intensity": 140.6075,
+      "max_intensity": 198.37,
+      "contrast": 57.76250000000002,
+      "likely_answer": "B"
+    },
+    {
+      "question": 49,
+      "subject": "SQL",
+      "intensities": {
+        "A": 197.235,
+        "B": 193.63,
+        "C": 194.695,
+        "D": 195.6325
+      },
+      "min_intensity": 193.63,
+      "max_intensity": 197.235,
+      "contrast": 3.605000000000018,
+      "likely_answer": null
+    },
+    {
+      "question": 50,
+      "subject": "SQL",
+      "intensities": {
+        "A": 196.39,
+        "B": 191.045,
+        "C": 143.2775,
+        "D": 193.2725
+      },
+      "min_intensity": 143.2775,
+      "max_intensity": 196.39,
+      "contrast": 53.11249999999998,
+      "likely_answer": "C"
+    },
+    {
+      "question": 51,
+      "subject": "SQL",
+      "intensities": {
+        "A": 195.8,
+        "B": 188.885,
+        "C": 191.48,
+        "D": 195.0275
+      },
+      "min_intensity": 188.885,
+      "max_intensity": 195.8,
+      "contrast": 6.9150000000000205,
+      "likely_answer": null
+    },
+    {
+      "question": 52,
+      "subject": "SQL",
+      "intensities": {
+        "A": 193.045,
+        "B": 188.2325,
+        "C": 186.8425,
+        "D": 187.59
+      },
+      "min_intensity": 186.8425,
+      "max_intensity": 193.045,
+      "contrast": 6.202499999999986,
+      "likely_answer": null
+    },
+    {
+      "question": 53,
+      "subject": "SQL",
+      "intensities": {
+        "A": 193.0025,
+        "B": 186.7525,
+        "C": 161.3425,
+        "D": 183.6675
+      },
+      "min_intensity": 161.3425,
+      "max_intensity": 193.0025,
+      "contrast": 31.659999999999997,
+      "likely_answer": "C"
+    },
+    {
+      "question": 54,
+      "subject": "SQL",
+      "intensities": {
+        "A": 190.71,
+        "B": 147.05,
+        "C": 185.35,
+        "D": 182.0025
+      },
+      "min_intensity": 147.05,
+      "max_intensity": 190.71,
+      "contrast": 43.66,
+      "likely_answer": "B"
+    },
+    {
+      "question": 55,
+      "subject": "SQL",
+      "intensities": {
+        "A": 189.575,
+        "B": 189.57,
+        "C": 188.6725,
+        "D": 182.405
+      },
+      "min_intensity": 182.405,
+      "max_intensity": 189.575,
+      "contrast": 7.1699999999999875,
+      "likely_answer": null
+    },
+    {
+      "question": 56,
+      "subject": "SQL",
+      "intensities": {
+        "A": 187.85,
+        "B": 182.12,
+        "C": 183.11,
+        "D": 177.6625
+      },
+      "min_intensity": 177.6625,
+      "max_intensity": 187.85,
+      "contrast": 10.1875,
+      "likely_answer": null
+    },
+    {
+      "question": 57,
+      "subject": "SQL",
+      "intensities": {
+        "A": 182.895,
+        "B": 151.015,
+        "C": 180.695,
+        "D": 175.13
+      },
+      "min_intensity": 151.015,
+      "max_intensity": 182.895,
+      "contrast": 31.880000000000024,
+      "likely_answer": "B"
+    },
+    {
+      "question": 58,
+      "subject": "SQL",
+      "intensities": {
+        "A": 180.01,
+        "B": 102.8275,
+        "C": 174.44,
+        "D": 169.0625
+      },
+      "min_intensity": 102.8275,
+      "max_intensity": 180.01,
+      "contrast": 77.18249999999999,
+      "likely_answer": "B"
+    },
+    {
+      "question": 59,
+      "subject": "SQL",
+      "intensities": {
+        "A": 179.605,
+        "B": 80.4775,
+        "C": 172.9175,
+        "D": 166.4625
+      },
+      "min_intensity": 80.4775,
+      "max_intensity": 179.605,
+      "contrast": 99.12749999999998,
+      "likely_answer": "B"
+    },
+    {
+      "question": 60,
+      "subject": "SQL",
+      "intensities": {
+        "A": 172.0125,
+        "B": 166.47,
+        "C": 160.67,
+        "D": 151.805
+      },
+      "min_intensity": 151.805,
+      "max_intensity": 172.0125,
+      "contrast": 20.207499999999982,
+      "likely_answer": null
+    },
+    {
+      "question": 61,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 198.045,
+        "B": 193.305,
+        "C": 196.8675,
+        "D": 192.4
+      },
+      "min_intensity": 192.4,
+      "max_intensity": 198.045,
+      "contrast": 5.644999999999982,
+      "likely_answer": null
+    },
+    {
+      "question": 62,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 203.2125,
+        "B": 178.09,
+        "C": 202.6575,
+        "D": 204.2825
+      },
+      "min_intensity": 178.09,
+      "max_intensity": 204.2825,
+      "contrast": 26.192499999999995,
+      "likely_answer": null
+    },
+    {
+      "question": 63,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 196.695,
+        "B": 197.74,
+        "C": 202.5275,
+        "D": 198.0775
+      },
+      "min_intensity": 196.695,
+      "max_intensity": 202.5275,
+      "contrast": 5.83250000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 64,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 162.4875,
+        "B": 193.3325,
+        "C": 194.5375,
+        "D": 194.1475
+      },
+      "min_intensity": 162.4875,
+      "max_intensity": 194.5375,
+      "contrast": 32.04999999999998,
+      "likely_answer": "A"
+    },
+    {
+      "question": 65,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 198.8025,
+        "B": 195.6625,
+        "C": 195.745,
+        "D": 193.9
+      },
+      "min_intensity": 193.9,
+      "max_intensity": 198.8025,
+      "contrast": 4.902500000000003,
+      "likely_answer": null
+    },
+    {
+      "question": 66,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 194.405,
+        "B": 178.45,
+        "C": 191.5625,
+        "D": 181.815
+      },
+      "min_intensity": 178.45,
+      "max_intensity": 194.405,
+      "contrast": 15.955000000000013,
+      "likely_answer": null
+    },
+    {
+      "question": 67,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 195.6025,
+        "B": 186.23,
+        "C": 196.295,
+        "D": 196.76
+      },
+      "min_intensity": 186.23,
+      "max_intensity": 196.76,
+      "contrast": 10.530000000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 68,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 185.8325,
+        "B": 163.67,
+        "C": 192.0225,
+        "D": 181.3475
+      },
+      "min_intensity": 163.67,
+      "max_intensity": 192.0225,
+      "contrast": 28.35250000000002,
+      "likely_answer": null
+    },
+    {
+      "question": 69,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 191.9075,
+        "B": 191.9475,
+        "C": 188.3125,
+        "D": 189.625
+      },
+      "min_intensity": 188.3125,
+      "max_intensity": 191.9475,
+      "contrast": 3.634999999999991,
+      "likely_answer": null
+    },
+    {
+      "question": 70,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 179.7575,
+        "B": 145.995,
+        "C": 187.0875,
+        "D": 168.93
+      },
+      "min_intensity": 145.995,
+      "max_intensity": 187.0875,
+      "contrast": 41.0925,
+      "likely_answer": "B"
+    },
+    {
+      "question": 71,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 191.31,
+        "B": 174.915,
+        "C": 188.8875,
+        "D": 190.1775
+      },
+      "min_intensity": 174.915,
+      "max_intensity": 191.31,
+      "contrast": 16.39500000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 72,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 162.705,
+        "B": 108.64,
+        "C": 168.4725,
+        "D": 155.0925
+      },
+      "min_intensity": 108.64,
+      "max_intensity": 168.4725,
+      "contrast": 59.832499999999996,
+      "likely_answer": "B"
+    },
+    {
+      "question": 73,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 148.97,
+        "B": 144.425,
+        "C": 117.3475,
+        "D": 144.9
+      },
+      "min_intensity": 117.3475,
+      "max_intensity": 148.97,
+      "contrast": 31.622500000000002,
+      "likely_answer": "C"
+    },
+    {
+      "question": 74,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 142.0375,
+        "B": 140.385,
+        "C": 139.0725,
+        "D": 132.245
+      },
+      "min_intensity": 132.245,
+      "max_intensity": 142.0375,
+      "contrast": 9.79249999999999,
+      "likely_answer": null
+    },
+    {
+      "question": 75,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 147.7275,
+        "B": 140.405,
+        "C": 140.1775,
+        "D": 138.535
+      },
+      "min_intensity": 138.535,
+      "max_intensity": 147.7275,
+      "contrast": 9.192499999999995,
+      "likely_answer": null
+    },
+    {
+      "question": 76,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 140.8125,
+        "B": 111.335,
+        "C": 130.625,
+        "D": 131.16
+      },
+      "min_intensity": 111.335,
+      "max_intensity": 140.8125,
+      "contrast": 29.477500000000006,
+      "likely_answer": null
+    },
+    {
+      "question": 77,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 131.8,
+        "B": 96.3875,
+        "C": 128.98,
+        "D": 130.3675
+      },
+      "min_intensity": 96.3875,
+      "max_intensity": 131.8,
+      "contrast": 35.41250000000001,
+      "likely_answer": "B"
+    },
+    {
+      "question": 78,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 116.975,
+        "B": 64.755,
+        "C": 126.0825,
+        "D": 133.33
+      },
+      "min_intensity": 64.755,
+      "max_intensity": 133.33,
+      "contrast": 68.57500000000002,
+      "likely_answer": "B"
+    },
+    {
+      "question": 79,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 113.02,
+        "B": 89.1,
+        "C": 126.25,
+        "D": 129.3125
+      },
+      "min_intensity": 89.1,
+      "max_intensity": 129.3125,
+      "contrast": 40.212500000000006,
+      "likely_answer": "B"
+    },
+    {
+      "question": 80,
+      "subject": "PowerBI",
+      "intensities": {
+        "A": 128.44,
+        "B": 124.4125,
+        "C": 125.255,
+        "D": 125.6825
+      },
+      "min_intensity": 124.4125,
+      "max_intensity": 128.44,
+      "contrast": 4.027500000000003,
+      "likely_answer": null
+    },
+    {
+      "question": 81,
+      "subject": "Stats",
+      "intensities": {
+        "A": 195.865,
+        "B": 199.8775,
+        "C": 225.6125,
+        "D": 127.9575
+      },
+      "min_intensity": 127.9575,
+      "max_intensity": 225.6125,
+      "contrast": 97.65500000000002,
+      "likely_answer": "D"
+    },
+    {
+      "question": 82,
+      "subject": "Stats",
+      "intensities": {
+        "A": 185.5925,
+        "B": 204.53,
+        "C": 218.04,
+        "D": 185.4375
+      },
+      "min_intensity": 185.4375,
+      "max_intensity": 218.04,
+      "contrast": 32.60249999999999,
+      "likely_answer": "D"
+    },
+    {
+      "question": 83,
+      "subject": "Stats",
+      "intensities": {
+        "A": 196.795,
+        "B": 201.0875,
+        "C": 199.2525,
+        "D": 198.0325
+      },
+      "min_intensity": 196.795,
+      "max_intensity": 201.0875,
+      "contrast": 4.292500000000018,
+      "likely_answer": null
+    },
+    {
+      "question": 84,
+      "subject": "Stats",
+      "intensities": {
+        "A": 190.75,
+        "B": 196.7225,
+        "C": 196.915,
+        "D": 154.7575
+      },
+      "min_intensity": 154.7575,
+      "max_intensity": 196.915,
+      "contrast": 42.1575,
+      "likely_answer": "D"
+    },
+    {
+      "question": 85,
+      "subject": "Stats",
+      "intensities": {
+        "A": 194.5,
+        "B": 196.3875,
+        "C": 198.8225,
+        "D": 150.5175
+      },
+      "min_intensity": 150.5175,
+      "max_intensity": 198.8225,
+      "contrast": 48.30499999999998,
+      "likely_answer": "D"
+    },
+    {
+      "question": 86,
+      "subject": "Stats",
+      "intensities": {
+        "A": 190.745,
+        "B": 192.64,
+        "C": 197.8475,
+        "D": 141.8375
+      },
+      "min_intensity": 141.8375,
+      "max_intensity": 197.8475,
+      "contrast": 56.00999999999999,
+      "likely_answer": "D"
+    },
+    {
+      "question": 87,
+      "subject": "Stats",
+      "intensities": {
+        "A": 180.405,
+        "B": 194.835,
+        "C": 196.96,
+        "D": 146.755
+      },
+      "min_intensity": 146.755,
+      "max_intensity": 196.96,
+      "contrast": 50.20500000000001,
+      "likely_answer": "D"
+    },
+    {
+      "question": 88,
+      "subject": "Stats",
+      "intensities": {
+        "A": 133.25,
+        "B": 189.335,
+        "C": 195.3,
+        "D": 135.1925
+      },
+      "min_intensity": 133.25,
+      "max_intensity": 195.3,
+      "contrast": 62.05000000000001,
+      "likely_answer": "A"
+    },
+    {
+      "question": 89,
+      "subject": "Stats",
+      "intensities": {
+        "A": 190.3875,
+        "B": 188.685,
+        "C": 192.0675,
+        "D": 136.135
+      },
+      "min_intensity": 136.135,
+      "max_intensity": 192.0675,
+      "contrast": 55.932500000000005,
+      "likely_answer": "D"
+    },
+    {
+      "question": 90,
+      "subject": "Stats",
+      "intensities": {
+        "A": 117.5225,
+        "B": 189.675,
+        "C": 190.675,
+        "D": 135.0975
+      },
+      "min_intensity": 117.5225,
+      "max_intensity": 190.675,
+      "contrast": 73.15250000000002,
+      "likely_answer": "A"
+    },
+    {
+      "question": 91,
+      "subject": "Stats",
+      "intensities": {
+        "A": 189.94,
+        "B": 190.625,
+        "C": 189.9925,
+        "D": 129.0375
+      },
+      "min_intensity": 129.0375,
+      "max_intensity": 190.625,
+      "contrast": 61.587500000000006,
+      "likely_answer": "D"
+    },
+    {
+      "question": 92,
+      "subject": "Stats",
+      "intensities": {
+        "A": 170.8425,
+        "B": 168.5975,
+        "C": 175.555,
+        "D": 133.315
+      },
+      "min_intensity": 133.315,
+      "max_intensity": 175.555,
+      "contrast": 42.24000000000001,
+      "likely_answer": "D"
+    },
+    {
+      "question": 93,
+      "subject": "Stats",
+      "intensities": {
+        "A": 145.01,
+        "B": 143.03,
+        "C": 146.36,
+        "D": 124.7
+      },
+      "min_intensity": 124.7,
+      "max_intensity": 146.36,
+      "contrast": 21.66000000000001,
+      "likely_answer": null
+    },
+    {
+      "question": 94,
+      "subject": "Stats",
+      "intensities": {
+        "A": 126.1325,
+        "B": 137.24,
+        "C": 142.51,
+        "D": 130.265
+      },
+      "min_intensity": 126.1325,
+      "max_intensity": 142.51,
+      "contrast": 16.377499999999998,
+      "likely_answer": null
+    },
+    {
+      "question": 95,
+      "subject": "Stats",
+      "intensities": {
+        "A": 138.6725,
+        "B": 138.82,
+        "C": 141.9,
+        "D": 139.1875
+      },
+      "min_intensity": 138.6725,
+      "max_intensity": 141.9,
+      "contrast": 3.227499999999992,
+      "likely_answer": null
+    },
+    {
+      "question": 96,
+      "subject": "Stats",
+      "intensities": {
+        "A": 133.6025,
+        "B": 130.6825,
+        "C": 137.645,
+        "D": 146.135
+      },
+      "min_intensity": 130.6825,
+      "max_intensity": 146.135,
+      "contrast": 15.452499999999986,
+      "likely_answer": null
+    },
+    {
+      "question": 97,
+      "subject": "Stats",
+      "intensities": {
+        "A": 99.37,
+        "B": 127.4025,
+        "C": 136.375,
+        "D": 142.685
+      },
+      "min_intensity": 99.37,
+      "max_intensity": 142.685,
+      "contrast": 43.315,
+      "likely_answer": "A"
+    },
+    {
+      "question": 98,
+      "subject": "Stats",
+      "intensities": {
+        "A": 124.435,
+        "B": 125.52,
+        "C": 134.1675,
+        "D": 139.4375
+      },
+      "min_intensity": 124.435,
+      "max_intensity": 139.4375,
+      "contrast": 15.002499999999998,
+      "likely_answer": null
+    },
+    {
+      "question": 99,
+      "subject": "Stats",
+      "intensities": {
+        "A": 125.9275,
+        "B": 105.5175,
+        "C": 133.56,
+        "D": 137.015
+      },
+      "min_intensity": 105.5175,
+      "max_intensity": 137.015,
+      "contrast": 31.497499999999988,
+      "likely_answer": "B"
+    },
+    {
+      "question": 100,
+      "subject": "Stats",
+      "intensities": {
+        "A": 130.3525,
+        "B": 125.8925,
+        "C": 128.255,
+        "D": 132.4525
+      },
+      "min_intensity": 125.8925,
+      "max_intensity": 132.4525,
+      "contrast": 6.559999999999988,
+      "likely_answer": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "area_min": 40,
+  "area_max": 600,
+  "circularity_min": 0.5,
+  "aspect_ratio_min": 0.5,
+  "aspect_ratio_max": 1.8,
+  "size_min": 5,
+  "size_max": 50,
+  "extent_min": 0.3,
+  "solidity_min": 0.6,
+  "fill_variance_threshold": 0.015,
+  "min_fill_score": 0.12,
+  "adaptive_block_size": 15,
+  "adaptive_c": 5
+}
