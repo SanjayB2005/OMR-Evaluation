@@ -3,5 +3,15 @@
     "password": "e54fc6b51915e222ba6196747a19ebb8dfa651fd2b46a385a0ded647fbfefda0",
     "email": "vicky@gmail.com",
     "created_at": 1758441920.9095347
+  },
+  "sanjay": {
+    "password": "6460662e217c7a9f899208dd70a2c28abdea42f128666a9b78e6c0c064846493",
+    "email": "bsanjay@gmail.com",
+    "created_at": "2025-09-21 14:15:31"
+  },
+  "sanvic": {
+    "password": "481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5",
+    "email": "sanjay@gmail.com",
+    "created_at": "2025-09-21 14:16:25"
   }
 }

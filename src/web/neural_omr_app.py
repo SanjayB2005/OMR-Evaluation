@@ -62,6 +62,116 @@ def authenticate_user(username, password):
             return True
     return False
 
+# Answer Key Management Functions
+def load_answer_keys():
+    """Load answer keys from JSON file"""
+    answer_keys_file = "answer_keys.json"
+    if os.path.exists(answer_keys_file):
+        try:
+            with open(answer_keys_file, 'r') as f:
+                return json.load(f)
+        except:
+            return get_default_answer_keys()
+    return get_default_answer_keys()
+
+def save_answer_keys(answer_keys):
+    """Save answer keys to JSON file"""
+    answer_keys_file = "answer_keys.json"
+    with open(answer_keys_file, 'w') as f:
+        json.dump(answer_keys, f, indent=2)
+
+def get_default_answer_keys():
+    """Get default answer keys for Set A and Set B"""
+    return {
+        "Set A": {
+            'Q1': 'A', 'Q2': 'C', 'Q3': 'C', 'Q4': 'C', 'Q5': 'C', 'Q6': 'A', 'Q7': 'C', 'Q8': 'C', 'Q9': 'B', 'Q10': 'C',
+            'Q11': 'A', 'Q12': 'A', 'Q13': 'D', 'Q14': 'A', 'Q15': 'B', 'Q16': 'A', 'Q17': 'C', 'Q18': 'D', 'Q19': 'A', 'Q20': 'B',
+            'Q21': 'A', 'Q22': 'D', 'Q23': 'B', 'Q24': 'A', 'Q25': 'C', 'Q26': 'B', 'Q27': 'A', 'Q28': 'B', 'Q29': 'D', 'Q30': 'C',
+            'Q31': 'C', 'Q32': 'A', 'Q33': 'B', 'Q34': 'C', 'Q35': 'A', 'Q36': 'B', 'Q37': 'D', 'Q38': 'B', 'Q39': 'A', 'Q40': 'B',
+            'Q41': 'C', 'Q42': 'C', 'Q43': 'C', 'Q44': 'B', 'Q45': 'B', 'Q46': 'A', 'Q47': 'C', 'Q48': 'B', 'Q49': 'D', 'Q50': 'A',
+            'Q51': 'C', 'Q52': 'B', 'Q53': 'C', 'Q54': 'C', 'Q55': 'A', 'Q56': 'B', 'Q57': 'B', 'Q58': 'A', 'Q59': 'A', 'Q60': 'B',
+            'Q61': 'B', 'Q62': 'C', 'Q63': 'A', 'Q64': 'B', 'Q65': 'C', 'Q66': 'B', 'Q67': 'B', 'Q68': 'C', 'Q69': 'C', 'Q70': 'B',
+            'Q71': 'B', 'Q72': 'B', 'Q73': 'D', 'Q74': 'B', 'Q75': 'A', 'Q76': 'B', 'Q77': 'B', 'Q78': 'B', 'Q79': 'B', 'Q80': 'B',
+            'Q81': 'A', 'Q82': 'B', 'Q83': 'C', 'Q84': 'D', 'Q85': 'A', 'Q86': 'B', 'Q87': 'C', 'Q88': 'D', 'Q89': 'A', 'Q90': 'B',
+            'Q91': 'C', 'Q92': 'D', 'Q93': 'A', 'Q94': 'B', 'Q95': 'C', 'Q96': 'D', 'Q97': 'A', 'Q98': 'B', 'Q99': 'C', 'Q100': 'D'
+        },
+        "Set B": {
+            'Q1': 'A', 'Q2': 'B', 'Q3': 'D', 'Q4': 'B', 'Q5': 'B', 'Q6': 'D', 'Q7': 'C', 'Q8': 'C', 'Q9': 'A', 'Q10': 'C',
+            'Q11': 'A', 'Q12': 'B', 'Q13': 'D', 'Q14': 'C', 'Q15': 'C', 'Q16': 'A', 'Q17': 'C', 'Q18': 'B', 'Q19': 'D', 'Q20': 'C',
+            'Q21': 'A', 'Q22': 'A', 'Q23': 'B', 'Q24': 'A', 'Q25': 'B', 'Q26': 'A', 'Q27': 'B', 'Q28': 'B', 'Q29': 'C', 'Q30': 'C',
+            'Q31': 'B', 'Q32': 'C', 'Q33': 'B', 'Q34': 'C', 'Q35': 'A', 'Q36': 'A', 'Q37': 'A', 'Q38': 'B', 'Q39': 'B', 'Q40': 'A',
+            'Q41': 'B', 'Q42': 'A', 'Q43': 'D', 'Q44': 'B', 'Q45': 'C', 'Q46': 'B', 'Q47': 'B', 'Q48': 'B', 'Q49': 'B', 'Q50': 'B',
+            'Q51': 'C', 'Q52': 'A', 'Q53': 'C', 'Q54': 'A', 'Q55': 'C', 'Q56': 'C', 'Q57': 'B', 'Q58': 'A', 'Q59': 'B', 'Q60': 'C',
+            'Q61': 'B', 'Q62': 'B', 'Q63': 'B', 'Q64': 'D', 'Q65': 'C', 'Q66': 'B', 'Q67': 'B', 'Q68': 'A', 'Q69': 'B', 'Q70': 'B',
+            'Q71': 'B', 'Q72': 'C', 'Q73': 'A', 'Q74': 'D', 'Q75': 'B', 'Q76': 'B', 'Q77': 'D', 'Q78': 'A', 'Q79': 'B', 'Q80': 'A',
+            'Q81': 'B', 'Q82': 'C', 'Q83': 'D', 'Q84': 'A', 'Q85': 'B', 'Q86': 'C', 'Q87': 'D', 'Q88': 'A', 'Q89': 'B', 'Q90': 'C',
+            'Q91': 'D', 'Q92': 'A', 'Q93': 'B', 'Q94': 'C', 'Q95': 'D', 'Q96': 'A', 'Q97': 'B', 'Q98': 'C', 'Q99': 'D', 'Q100': 'A'
+        }
+    }
+
+def add_answer_key(set_name, answer_key):
+    """Add or update an answer key set"""
+    answer_keys = load_answer_keys()
+    answer_keys[set_name] = answer_key
+    save_answer_keys(answer_keys)
+    return True
+
+def delete_answer_key(set_name):
+    """Delete an answer key set"""
+    answer_keys = load_answer_keys()
+    if set_name in answer_keys and set_name not in ["Set A", "Set B"]:
+        del answer_keys[set_name]
+        save_answer_keys(answer_keys)
+        return True
+    return False
+
+def export_answer_keys_to_excel():
+    """Export all answer keys to Excel format"""
+    try:
+        answer_keys = load_answer_keys()
+        
+        if not answer_keys:
+            return None
+        
+        # Create Excel file with multiple sheets
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            
+            # Create a summary sheet with all answer keys
+            all_data = []
+            for set_name, answers in answer_keys.items():
+                row_data = {'Set_Name': set_name}
+                
+                # Add all questions
+                max_questions = max(len(answers) for answers in answer_keys.values())
+                for i in range(1, max_questions + 1):
+                    row_data[f'Q{i}'] = answers.get(f'Q{i}', '')
+                
+                all_data.append(row_data)
+            
+            # Create summary DataFrame
+            summary_df = pd.DataFrame(all_data)
+            summary_df.to_excel(writer, sheet_name='All_Answer_Keys', index=False)
+            
+            # Create individual sheets for each answer key
+            for set_name, answers in answer_keys.items():
+                # Clean sheet name (Excel doesn't allow certain characters)
+                sheet_name = str(set_name).replace('/', '_').replace('\\', '_')[:31]
+                
+                # Create DataFrame for this answer key
+                data = []
+                for q, answer in answers.items():
+                    data.append({'Question': q, 'Answer': answer})
+                
+                df = pd.DataFrame(data)
+                df.to_excel(writer, sheet_name=sheet_name, index=False)
+        
+        return output.getvalue()
+    
+    except Exception as e:
+        st.error(f"Error exporting answer keys: {str(e)}")
+        return None
+
 def show_auth_page():
     """Display simple authentication page with toggle between login and signup"""
     # Initialize auth mode in session state
@@ -616,37 +726,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 def get_answer_key(set_type):
-    """Get answer key based on set type - using actual Excel answer keys"""
-    if set_type == "Set A":
-        # Set A answer key from Excel file (80 questions)
-        return {
-            'Q1': 'A', 'Q2': 'C', 'Q3': 'C', 'Q4': 'C', 'Q5': 'C', 'Q6': 'A', 'Q7': 'C', 'Q8': 'C', 'Q9': 'B', 'Q10': 'C',
-            'Q11': 'A', 'Q12': 'A', 'Q13': 'D', 'Q14': 'A', 'Q15': 'B', 'Q16': 'A', 'Q17': 'C', 'Q18': 'D', 'Q19': 'A', 'Q20': 'B',
-            'Q21': 'A', 'Q22': 'D', 'Q23': 'B', 'Q24': 'A', 'Q25': 'C', 'Q26': 'B', 'Q27': 'A', 'Q28': 'B', 'Q29': 'D', 'Q30': 'C',
-            'Q31': 'C', 'Q32': 'A', 'Q33': 'B', 'Q34': 'C', 'Q35': 'A', 'Q36': 'B', 'Q37': 'D', 'Q38': 'B', 'Q39': 'A', 'Q40': 'B',
-            'Q41': 'C', 'Q42': 'C', 'Q43': 'C', 'Q44': 'B', 'Q45': 'B', 'Q46': 'A', 'Q47': 'C', 'Q48': 'B', 'Q49': 'D', 'Q50': 'A',
-            'Q51': 'C', 'Q52': 'B', 'Q53': 'C', 'Q54': 'C', 'Q55': 'A', 'Q56': 'B', 'Q57': 'B', 'Q58': 'A', 'Q59': 'A', 'Q60': 'B',
-            'Q61': 'B', 'Q62': 'C', 'Q63': 'A', 'Q64': 'B', 'Q65': 'C', 'Q66': 'B', 'Q67': 'B', 'Q68': 'C', 'Q69': 'C', 'Q70': 'B',
-            'Q71': 'B', 'Q72': 'B', 'Q73': 'D', 'Q74': 'B', 'Q75': 'A', 'Q76': 'B', 'Q77': 'B', 'Q78': 'B', 'Q79': 'B', 'Q80': 'B',
-            # Extended for remaining questions (using pattern for Q81-Q100)
-            'Q81': 'A', 'Q82': 'B', 'Q83': 'C', 'Q84': 'D', 'Q85': 'A', 'Q86': 'B', 'Q87': 'C', 'Q88': 'D', 'Q89': 'A', 'Q90': 'B',
-            'Q91': 'C', 'Q92': 'D', 'Q93': 'A', 'Q94': 'B', 'Q95': 'C', 'Q96': 'D', 'Q97': 'A', 'Q98': 'B', 'Q99': 'C', 'Q100': 'D'
-        }
-    else:  # Set B
-        # Set B answer key from Excel file (80 questions)
-        return {
-            'Q1': 'A', 'Q2': 'B', 'Q3': 'D', 'Q4': 'B', 'Q5': 'B', 'Q6': 'D', 'Q7': 'C', 'Q8': 'C', 'Q9': 'A', 'Q10': 'C',
-            'Q11': 'A', 'Q12': 'B', 'Q13': 'D', 'Q14': 'C', 'Q15': 'C', 'Q16': 'A', 'Q17': 'C', 'Q18': 'B', 'Q19': 'D', 'Q20': 'C',
-            'Q21': 'A', 'Q22': 'A', 'Q23': 'B', 'Q24': 'A', 'Q25': 'B', 'Q26': 'A', 'Q27': 'B', 'Q28': 'B', 'Q29': 'C', 'Q30': 'C',
-            'Q31': 'B', 'Q32': 'C', 'Q33': 'B', 'Q34': 'C', 'Q35': 'A', 'Q36': 'A', 'Q37': 'A', 'Q38': 'B', 'Q39': 'B', 'Q40': 'A',
-            'Q41': 'B', 'Q42': 'A', 'Q43': 'D', 'Q44': 'B', 'Q45': 'C', 'Q46': 'B', 'Q47': 'B', 'Q48': 'B', 'Q49': 'B', 'Q50': 'B',
-            'Q51': 'C', 'Q52': 'A', 'Q53': 'C', 'Q54': 'A', 'Q55': 'C', 'Q56': 'C', 'Q57': 'B', 'Q58': 'A', 'Q59': 'B', 'Q60': 'C',
-            'Q61': 'B', 'Q62': 'B', 'Q63': 'B', 'Q64': 'D', 'Q65': 'C', 'Q66': 'B', 'Q67': 'B', 'Q68': 'A', 'Q69': 'B', 'Q70': 'B',
-            'Q71': 'B', 'Q72': 'C', 'Q73': 'A', 'Q74': 'D', 'Q75': 'B', 'Q76': 'B', 'Q77': 'D', 'Q78': 'A', 'Q79': 'B', 'Q80': 'A',
-            # Extended for remaining questions (using pattern for Q81-Q100)
-            'Q81': 'B', 'Q82': 'C', 'Q83': 'D', 'Q84': 'A', 'Q85': 'B', 'Q86': 'C', 'Q87': 'D', 'Q88': 'A', 'Q89': 'B', 'Q90': 'C',
-            'Q91': 'D', 'Q92': 'A', 'Q93': 'B', 'Q94': 'C', 'Q95': 'D', 'Q96': 'A', 'Q97': 'B', 'Q98': 'C', 'Q99': 'D', 'Q100': 'A'
-        }
+    """Get answer key based on set type from the answer keys database"""
+    answer_keys = load_answer_keys()
+    return answer_keys.get(set_type, {})
 
 def create_hero_header():
     """Create stunning animated hero header"""
@@ -926,7 +1008,7 @@ def generate_batch_excel_report(results):
     return output.getvalue()
 
 def create_elegant_sidebar():
-    """Create glassmorphism sidebar"""
+    """Create glassmorphism sidebar with answer key management"""
     with st.sidebar:
         st.markdown("""
         <div class="sidebar-glass">
@@ -934,19 +1016,91 @@ def create_elegant_sidebar():
         </div>
         """, unsafe_allow_html=True)
         
+        # Answer Key Management Section
         st.markdown("""
         <div class="sidebar-glass">
-            <h4 style="color: #667eea; margin-bottom: 1rem; text-align: center;">🎯 Answer Set Selection</h4>
+            <h4 style="color: #667eea; margin-bottom: 1rem; text-align: center;">🔑 Answer Key Management</h4>
         </div>
         """, unsafe_allow_html=True)
         
+        # Load available answer keys
+        answer_keys = load_answer_keys()
+        available_sets = list(answer_keys.keys())
+        
+        # Answer set selection
         answer_set = st.selectbox(
-            "Answer Set",
-            ["Set A", "Set B"],
+            "Select Answer Set",
+            available_sets,
             key="answer_set_selector",
             help="Choose the answer key set for evaluation",
             label_visibility="collapsed"
         )
+        
+        # Answer key management buttons
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("➕ Add Key", use_container_width=True, key="add_key_btn"):
+                st.session_state.show_add_key = True
+        with col2:
+            if st.button("📝 Edit Key", use_container_width=True, key="edit_key_btn"):
+                st.session_state.show_edit_key = True
+                st.session_state.edit_set_name = answer_set
+        
+        # Import from Excel button
+        if st.button("📁 Import from Excel", use_container_width=True, key="import_excel_btn"):
+            st.session_state.show_import_excel = True
+        
+        # Export answer keys button
+        if st.button("📤 Export Answer Keys", use_container_width=True, key="export_keys_btn"):
+            excel_data = export_answer_keys_to_excel()
+            if excel_data:
+                st.download_button(
+                    label="📥 Download Answer Keys Excel",
+                    data=excel_data,
+                    file_name=f"answer_keys_{time.strftime('%Y%m%d_%H%M%S')}.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    use_container_width=True,
+                    key="download_answer_keys"
+                )
+        
+        # Show current answer key info
+        if answer_set in answer_keys:
+            num_questions = len(answer_keys[answer_set])
+            st.markdown(f"""
+            <div style="background: rgba(102,126,234,0.1); border-radius: 8px; padding: 0.5rem; margin-top: 0.5rem;">
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+                    📊 {answer_set}: {num_questions} questions
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="sidebar-glass">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">🔥 Processing Features</h4>
+            <div style="color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.6;">
+                • Multi-image batch processing<br>
+                • Real-time accuracy calculation<br>
+                • Comprehensive Excel reports<br>
+                • Custom answer key management<br>
+                • Advanced error handling<br>
+                • Responsive progress tracking
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="sidebar-glass">
+            <h4 style="color: #667eea; margin-bottom: 1rem;">📈 Performance Stats</h4>
+            <div style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+                <div style="margin-bottom: 0.5rem;">⚡ Processing Speed: ~2s/image</div>
+                <div style="margin-bottom: 0.5rem;">🎯 Accuracy Rate: 99.8%</div>
+                <div style="margin-bottom: 0.5rem;">📊 Supported Formats: JPG, PNG</div>
+                <div>🔄 Max Batch Size: 50 images</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        return answer_set
         
         st.markdown("""
         <div class="sidebar-glass">
@@ -974,6 +1128,309 @@ def create_elegant_sidebar():
         """, unsafe_allow_html=True)
         
         return answer_set
+
+def show_answer_key_management():
+    """Show answer key management interface"""
+    if st.session_state.get('show_add_key', False):
+        show_add_answer_key_form()
+    
+    if st.session_state.get('show_edit_key', False):
+        show_edit_answer_key_form()
+    
+    if st.session_state.get('show_import_excel', False):
+        show_import_excel_form()
+
+def show_import_excel_form():
+    """Show form to import answer keys from Excel"""
+    st.markdown("""
+    <div class="glass-card">
+        <h3 style="margin-top: 0; color: #667eea; font-weight: 600;">📁 Import Answer Key from Excel</h3>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+            Upload an Excel file with answer keys. The file should have columns for questions (Q1, Q2, etc.) and their corresponding answers.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # File uploader for Excel
+    uploaded_excel = st.file_uploader(
+        "Choose Excel file",
+        type=['xlsx', 'xls'],
+        help="Upload Excel file containing answer keys",
+        key="excel_upload"
+    )
+    
+    if uploaded_excel is not None:
+        try:
+            # Read Excel file
+            df = pd.read_excel(uploaded_excel)
+            st.write("**Preview of uploaded Excel file:**")
+            st.dataframe(df.head(), use_container_width=True)
+            
+            # Let user specify which columns contain the data
+            with st.form("import_excel_form"):
+                set_name = st.text_input(
+                    "Answer Set Name",
+                    placeholder="e.g., Imported Set 1",
+                    help="Enter a name for this imported answer key"
+                )
+                
+                # Show available columns
+                available_columns = df.columns.tolist()
+                st.write("**Available columns in Excel file:**")
+                st.write(", ".join(available_columns))
+                
+                # Option 1: Question columns are Q1, Q2, Q3, etc.
+                use_q_format = st.checkbox(
+                    "Excel has Q1, Q2, Q3... format columns",
+                    value=True,
+                    help="Check if your Excel file has columns named Q1, Q2, Q3, etc."
+                )
+                
+                if use_q_format:
+                    # Find Q columns automatically
+                    q_columns = [col for col in available_columns if str(col).startswith('Q') and str(col)[1:].isdigit()]
+                    if q_columns:
+                        st.success(f"Found {len(q_columns)} question columns: {', '.join(q_columns[:10])}{'...' if len(q_columns) > 10 else ''}")
+                        row_index = st.number_input(
+                            "Row number to extract answers from (0-based index)",
+                            min_value=0,
+                            max_value=len(df)-1,
+                            value=0,
+                            help="Which row contains the answer key (0 = first row)"
+                        )
+                    else:
+                        st.error("No Q1, Q2, Q3... columns found in the Excel file!")
+                        q_columns = []
+                else:
+                    # Manual column selection
+                    start_col = st.selectbox("Select starting column for questions", available_columns)
+                    num_questions = st.number_input("Number of questions", min_value=1, max_value=100, value=100)
+                    row_index = st.number_input(
+                        "Row number to extract answers from (0-based index)",
+                        min_value=0,
+                        max_value=len(df)-1,
+                        value=0
+                    )
+                
+                # Form buttons
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.form_submit_button("📥 Import Answer Key", use_container_width=True):
+                        if not set_name or not set_name.strip():
+                            st.error("Please enter a valid set name!")
+                        else:
+                            try:
+                                answers = {}
+                                
+                                if use_q_format and q_columns:
+                                    # Extract answers from Q columns
+                                    for col in q_columns:
+                                        answer = str(df.iloc[row_index][col]).strip().upper()
+                                        if answer in ['A', 'B', 'C', 'D']:
+                                            answers[col] = answer
+                                        else:
+                                            st.warning(f"Invalid answer '{answer}' for {col}, skipping...")
+                                else:
+                                    # Extract from specified range
+                                    start_idx = available_columns.index(start_col)
+                                    for i in range(num_questions):
+                                        if start_idx + i < len(available_columns):
+                                            col = available_columns[start_idx + i]
+                                            answer = str(df.iloc[row_index][col]).strip().upper()
+                                            if answer in ['A', 'B', 'C', 'D']:
+                                                answers[f'Q{i+1}'] = answer
+                                
+                                if answers:
+                                    # Check if set name already exists
+                                    existing_keys = load_answer_keys()
+                                    if set_name in existing_keys:
+                                        st.error(f"Answer key '{set_name}' already exists!")
+                                    else:
+                                        add_answer_key(set_name, answers)
+                                        st.success(f"✅ Successfully imported {len(answers)} answers for '{set_name}'!")
+                                        st.session_state.show_import_excel = False
+                                        time.sleep(1)
+                                        st.rerun()
+                                else:
+                                    st.error("No valid answers found in the Excel file!")
+                            
+                            except Exception as e:
+                                st.error(f"Error importing Excel file: {str(e)}")
+                
+                with col2:
+                    if st.form_submit_button("❌ Cancel", use_container_width=True):
+                        st.session_state.show_import_excel = False
+                        st.rerun()
+        
+        except Exception as e:
+            st.error(f"Error reading Excel file: {str(e)}")
+    
+    else:
+        # Show format example
+        st.markdown("""
+        <div style="background: rgba(102,126,234,0.1); border-radius: 12px; padding: 1rem; margin: 1rem 0;">
+            <h4 style="color: #667eea; margin-bottom: 0.5rem;">📋 Expected Excel Format:</h4>
+            <div style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+                <strong>Option 1:</strong> Columns named Q1, Q2, Q3, ... Q100<br>
+                <strong>Option 2:</strong> Consecutive columns with answers in A, B, C, D format<br><br>
+                <strong>Example:</strong><br>
+                | Q1 | Q2 | Q3 | Q4 | ...<br>
+                | A  | B  | C  | D  | ...
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Cancel button when no file uploaded
+        if st.button("❌ Cancel Import", use_container_width=True):
+            st.session_state.show_import_excel = False
+            st.rerun()
+
+def show_add_answer_key_form():
+    """Show form to add new answer key"""
+    st.markdown("""
+    <div class="glass-card">
+        <h3 style="margin-top: 0; color: #667eea; font-weight: 600;">➕ Add New Answer Key</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    with st.form("add_answer_key_form"):
+        # Set name input
+        set_name = st.text_input(
+            "Answer Set Name",
+            placeholder="e.g., Set C, Midterm 2024, etc.",
+            help="Enter a unique name for this answer key set"
+        )
+        
+        # Number of questions
+        num_questions = st.number_input(
+            "Number of Questions",
+            min_value=1,
+            max_value=100,
+            value=100,
+            help="Total number of questions in this answer key"
+        )
+        
+        st.markdown("**Enter Answer Key (A, B, C, or D for each question):**")
+        
+        # Create answer input grid
+        answers = {}
+        cols_per_row = 10
+        
+        for start_q in range(1, int(num_questions) + 1, cols_per_row):
+            cols = st.columns(cols_per_row)
+            for i, col in enumerate(cols):
+                q_num = start_q + i
+                if q_num <= num_questions:
+                    with col:
+                        answers[f'Q{q_num}'] = st.selectbox(
+                            f"Q{q_num}",
+                            ["A", "B", "C", "D"],
+                            key=f"add_q{q_num}",
+                            label_visibility="visible"
+                        )
+        
+        # Form buttons
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.form_submit_button("💾 Save Answer Key", use_container_width=True):
+                if set_name and set_name.strip():
+                    # Check if set name already exists
+                    existing_keys = load_answer_keys()
+                    if set_name in existing_keys:
+                        st.error(f"Answer key '{set_name}' already exists!")
+                    else:
+                        # Save the new answer key
+                        add_answer_key(set_name, answers)
+                        st.success(f"✅ Answer key '{set_name}' added successfully!")
+                        st.session_state.show_add_key = False
+                        time.sleep(1)
+                        st.rerun()
+                else:
+                    st.error("Please enter a valid set name!")
+        
+        with col2:
+            if st.form_submit_button("🔄 Reset Form", use_container_width=True):
+                st.rerun()
+        
+        with col3:
+            if st.form_submit_button("❌ Cancel", use_container_width=True):
+                st.session_state.show_add_key = False
+                st.rerun()
+
+def show_edit_answer_key_form():
+    """Show form to edit existing answer key"""
+    set_name = st.session_state.get('edit_set_name', '')
+    
+    if not set_name:
+        st.error("No answer key selected for editing!")
+        return
+    
+    st.markdown(f"""
+    <div class="glass-card">
+        <h3 style="margin-top: 0; color: #667eea; font-weight: 600;">📝 Edit Answer Key: {set_name}</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Load current answer key
+    answer_keys = load_answer_keys()
+    current_answers = answer_keys.get(set_name, {})
+    
+    if not current_answers:
+        st.error(f"Answer key '{set_name}' not found!")
+        return
+    
+    with st.form("edit_answer_key_form"):
+        st.markdown("**Current Answer Key:**")
+        
+        # Create answer input grid
+        answers = {}
+        cols_per_row = 10
+        num_questions = len(current_answers)
+        
+        for start_q in range(1, num_questions + 1, cols_per_row):
+            cols = st.columns(cols_per_row)
+            for i, col in enumerate(cols):
+                q_num = start_q + i
+                if q_num <= num_questions:
+                    q_key = f'Q{q_num}'
+                    with col:
+                        current_answer = current_answers.get(q_key, 'A')
+                        answers[q_key] = st.selectbox(
+                            f"Q{q_num}",
+                            ["A", "B", "C", "D"],
+                            index=["A", "B", "C", "D"].index(current_answer),
+                            key=f"edit_q{q_num}",
+                            label_visibility="visible"
+                        )
+        
+        # Form buttons
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.form_submit_button("💾 Update Answer Key", use_container_width=True):
+                # Update the answer key
+                add_answer_key(set_name, answers)
+                st.success(f"✅ Answer key '{set_name}' updated successfully!")
+                st.session_state.show_edit_key = False
+                time.sleep(1)
+                st.rerun()
+        
+        with col2:
+            if st.form_submit_button("🗑️ Delete Answer Key", use_container_width=True):
+                if set_name not in ["Set A", "Set B"]:
+                    if delete_answer_key(set_name):
+                        st.success(f"✅ Answer key '{set_name}' deleted successfully!")
+                        st.session_state.show_edit_key = False
+                        time.sleep(1)
+                        st.rerun()
+                    else:
+                        st.error("Failed to delete answer key!")
+                else:
+                    st.error("Cannot delete default answer keys (Set A, Set B)!")
+        
+        with col3:
+            if st.form_submit_button("❌ Cancel", use_container_width=True):
+                st.session_state.show_edit_key = False
+                st.rerun()
 
 def create_elegant_footer():
     """Create modern footer"""
@@ -1030,6 +1487,9 @@ def main():
     
     # Main content area
     st.markdown('<div class="animate-in">', unsafe_allow_html=True)
+    
+    # Show answer key management interface if needed
+    show_answer_key_management()
     
     # Multi-file upload zone
     uploaded_files = create_batch_upload_zone()
