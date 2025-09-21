@@ -7,6 +7,8 @@ from PIL import Image
 import base64
 import io
 import time
+import hashlib
+import json
 
 # Configure page
 st.set_page_config(
@@ -15,6 +17,190 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Authentication functions
+def hash_password(password):
+    """Hash password using SHA-256"""
+    return hashlib.sha256(password.encode()).hexdigest()
+
+def load_users():
+    """Load users from JSON file"""
+    users_file = "users.json"
+    if os.path.exists(users_file):
+        try:
+            with open(users_file, 'r') as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+def save_users(users):
+    """Save users to JSON file"""
+    users_file = "users.json"
+    with open(users_file, 'w') as f:
+        json.dump(users, f, indent=2)
+
+def create_user(username, password, email):
+    """Create a new user"""
+    users = load_users()
+    if username in users:
+        return False, "Username already exists"
+    
+    users[username] = {
+        "password": hash_password(password),
+        "email": email,
+        "created_at": time.strftime("%Y-%m-%d %H:%M:%S")
+    }
+    save_users(users)
+    return True, "User created successfully"
+
+def authenticate_user(username, password):
+    """Authenticate user credentials"""
+    users = load_users()
+    if username in users:
+        if users[username]["password"] == hash_password(password):
+            return True
+    return False
+
+def show_auth_page():
+    """Display simple authentication page with toggle between login and signup"""
+    # Initialize auth mode in session state
+    if 'auth_mode' not in st.session_state:
+        st.session_state.auth_mode = 'login'
+    
+    st.markdown("""
+    <div class="hero-header">
+        <div class="hero-content">
+            <h1 class="hero-title">NEURAL OMR</h1>
+            <p class="hero-subtitle">Advanced Authentication Portal</p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Single form area
+    if st.session_state.auth_mode == 'login':
+        show_simple_login()
+    else:
+        show_simple_signup()
+
+def show_simple_login():
+    """Display simple login form"""
+    st.markdown("""
+    <div class="glass-card" style="max-width: 500px; margin: 2rem auto;">
+        <h3 style="margin-top: 0; color: #667eea; font-weight: 600; text-align: center;">Welcome Back! 👋</h3>
+        <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 2rem;">
+            Enter your credentials to access the system
+        </p>
+    """, unsafe_allow_html=True)
+    
+    # Toggle buttons below the welcome message
+    col_a, col_b = st.columns(2)
+    
+    with col_a:
+        if st.button("🔐 Login", use_container_width=True, type="primary"):
+            st.session_state.auth_mode = 'login'
+            st.rerun()
+    
+    with col_b:
+        if st.button("✨ Sign Up", use_container_width=True, type="secondary"):
+            st.session_state.auth_mode = 'signup'
+            st.rerun()
+    
+    with st.form("login_form"):
+        login_username = st.text_input("👤 Username", placeholder="Enter your username", key="login_username")
+        login_password = st.text_input("🔒 Password", type="password", placeholder="Enter your password", key="login_password")
+        
+        login_submit = st.form_submit_button("🚀 Login", use_container_width=True)
+        
+        if login_submit:
+            if login_username and login_password:
+                if authenticate_user(login_username, login_password):
+                    st.session_state.authenticated = True
+                    st.session_state.username = login_username
+                    st.success("✅ Login successful!")
+                    time.sleep(1)
+                    st.rerun()
+                else:
+                    st.error("❌ Invalid username or password")
+            else:
+                st.error("❌ Please fill in all fields")
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+def show_simple_signup():
+    """Display simple signup form"""
+    st.markdown("""
+    <div class="glass-card" style="max-width: 500px; margin: 2rem auto;">
+        <h3 style="margin-top: 0; color: #667eea; font-weight: 600; text-align: center;">Create Account ✨</h3>
+        <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 2rem;">
+            Join Neural OMR to access advanced features
+        </p>
+    """, unsafe_allow_html=True)
+    
+    # Toggle buttons below the welcome message
+    col_a, col_b = st.columns(2)
+    
+    with col_a:
+        if st.button("🔐 Login", use_container_width=True, type="secondary"):
+            st.session_state.auth_mode = 'login'
+            st.rerun()
+    
+    with col_b:
+        if st.button("✨ Sign Up", use_container_width=True, type="primary"):
+            st.session_state.auth_mode = 'signup'
+            st.rerun()
+    
+    with st.form("signup_form"):
+        signup_username = st.text_input("👤 Username", placeholder="Choose a unique username", key="signup_username")
+        signup_email = st.text_input("📧 Email", placeholder="Enter your email address", key="signup_email")
+        signup_password = st.text_input("🔒 Password", type="password", placeholder="Choose a strong password", key="signup_password")
+        signup_confirm = st.text_input("🔒 Confirm Password", type="password", placeholder="Confirm your password", key="signup_confirm")
+        
+        signup_submit = st.form_submit_button("🎯 Create Account", use_container_width=True)
+        
+        if signup_submit:
+            if signup_username and signup_email and signup_password and signup_confirm:
+                if signup_password == signup_confirm:
+                    if len(signup_password) >= 6:
+                        success, message = create_user(signup_username, signup_password, signup_email)
+                        if success:
+                            st.success(f"✅ {message}")
+                            st.info("🎉 You can now login with your credentials!")
+                            time.sleep(1)
+                            st.session_state.auth_mode = 'login'
+                            st.rerun()
+                        else:
+                            st.error(f"❌ {message}")
+                    else:
+                        st.error("❌ Password must be at least 6 characters long")
+                else:
+                    st.error("❌ Passwords do not match")
+            else:
+                st.error("❌ Please fill in all fields")
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+def show_user_profile():
+    """Display user profile section in sidebar"""
+    with st.sidebar:
+        st.markdown(f"""
+        <div class="sidebar-glass">
+            <h4 style="color: #667eea; margin-bottom: 1rem; text-align: center;">👤 Welcome!</h4>
+            <div style="text-align: center; color: rgba(255,255,255,0.8);">
+                <div style="font-size: 1.1rem; font-weight: 600; color: #667eea; margin-bottom: 0.5rem;">
+                    {st.session_state.username}
+                </div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                    Active Session
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        if st.button("🚪 Logout", use_container_width=True):
+            st.session_state.authenticated = False
+            st.session_state.username = None
+            st.rerun()
 
 # Enhanced CSS for ultra-clean, elegant, and modern UI
 st.markdown("""
@@ -750,7 +936,7 @@ def create_elegant_sidebar():
         
         st.markdown("""
         <div class="sidebar-glass">
-            <h4 style="color: #667eea; margin-bottom: 1rem;">🎯 Answer Set Selection</h4>
+            <h4 style="color: #667eea; margin-bottom: 1rem; text-align: center;">🎯 Answer Set Selection</h4>
         </div>
         """, unsafe_allow_html=True)
         
@@ -823,6 +1009,18 @@ def main():
         st.session_state.batch_results = []
     if 'processing_complete' not in st.session_state:
         st.session_state.processing_complete = False
+    if 'authenticated' not in st.session_state:
+        st.session_state.authenticated = False
+    if 'username' not in st.session_state:
+        st.session_state.username = None
+    
+    # Authentication flow
+    if not st.session_state.authenticated:
+        show_auth_page()
+        return
+    
+    # Show user profile in sidebar
+    show_user_profile()
     
     # Create stunning hero header
     create_hero_header()
